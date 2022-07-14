@@ -16,7 +16,7 @@ File Example.cs contains example of usage of all methods. This repo contains all
 * CoT_to_APP6B.csv.asc - pgp clear signature
 * rsa.asc - public rsa key for pgp verification
 ***
-## Additional notes
+## Additional notes for C#
 Xades and pgp signature must contain clear file (clear/inner signature).
 Under Windows 10, certificates must be imported system wide (not as user).
 Remeber to import certificates in correct containers.
