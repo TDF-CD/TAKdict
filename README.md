@@ -1,4 +1,4 @@
-# TAKdict.NET
+# TAKdict
 Class for veryfying integrity and digital signature of dictionary.
 ## Class Integrity methods
 * **String getHash( String file_name )** - returns Base64 encoded SHA1 digest of file with given file name
