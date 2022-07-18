@@ -1,15 +1,14 @@
+package org.wot.tak;
+
 import org.bouncycastle.openpgp.*;
 import org.bouncycastle.openpgp.operator.bc.BcPGPContentVerifierBuilderProvider;
 import org.bouncycastle.openpgp.operator.jcajce.JcaKeyFingerprintCalculator;
 
 import java.io.*;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.security.SignatureException;
-import java.util.Base64;
 import java.util.Iterator;
 
-public class PgpSignatureValidator { // TODO not public
+class PgpSignatureValidator {
 
         public String getHash(String filePath) throws NoSuchAlgorithmException, IOException {
             MessageDigest messageDigest = MessageDigest.getInstance("SHA1");

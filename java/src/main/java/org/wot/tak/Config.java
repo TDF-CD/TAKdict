@@ -1,4 +1,6 @@
-public class Config {
+package org.wot.tak;
+
+class Config {
 
     String csvFilePath;
     String pubKeyFilePath;

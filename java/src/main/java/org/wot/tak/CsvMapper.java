@@ -1,9 +1,11 @@
+package org.wot.tak;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class CsvMapper {
+class CsvMapper {
 
     public static void findInCsv(String filePath, String term, int sourceColumn, int destinationColumn, String delimiter) {
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
