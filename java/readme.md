@@ -31,7 +31,7 @@ https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Ho
 
 Once successfully connected, open GIT Bash. Navigate to the desired location and enter the command below to clone the repo:
 ```
-git clone git@git.zdc.int:u.poliszuk/tak-cot.git
+git clone git@github.com:TDF-CD/TAKdict.git
 ```
 
 ### 5. Run CsvMapper
@@ -40,31 +40,30 @@ Compile CsvMapper class using the command:
 ```
 javac CsvMapper.java
 ```
-Run CsvMapper:
-```
-java -cp .  CsvMapper
-```
 
 #### 5.1. With the default delimiter - `;`
 
-4 arguments are required:
+6 arguments are required:
 - path (with the filename) to the CSV file
+- path (with the filename) to the public key file
+- path (with the filename) to the signature file
 - searched term
 - source column number (that the provided term is searched in)
 - destination column (that the result is returned from)
-5th argument is optional - delimiter.
+7th argument is optional - delimiter.
 
 Example:
 ```
-java -cp . CsvMapper APP6B_to_CoT.csv SUG-IRSR-- 0 2
+java -cp target/tak-1.0-SNAPSHOT.jar org.wot.tak.Main src/main/resources/APP6B_to_CoT.csv src/main/resources/pub.rsa src/main/resources/APP6B_to_CoT.csv.sig SUG-IRSR-- 0 2
 ```
+
 #### 5.2. With the custom delimiter
 
 Provide CSV delimiter as the 5th optional argument.
 
 Example:
 ```
-java -cp . CsvMapper APP6B_to_CoT.csv SUG-IRSR-- 0 2 ","
+java -cp target/tak-1.0-SNAPSHOT.jar org.wot.tak.Main src/main/resources/APP6B_to_CoT.csv src/main/resources/pub.rsa src/main/resources/APP6B_to_CoT.csv.sig SUG-IRSR-- 0 2 ","
 ```
 
 ## Licence
